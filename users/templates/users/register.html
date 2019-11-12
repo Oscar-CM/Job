@@ -1,0 +1,32 @@
+{% extends "jobs/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            Welcom to the register page
+
+        </div>
+        <div class="col-md-7">
+    <form method="POST">
+        {% csrf_token%}
+        <fieldset class="border-top" class="form-group">
+            <legend> Register</legend>
+            {{ form|crispy }}
+
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type = "submit"> Sign Up</button>
+        </div>
+        <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already have an account? <a class="ml-2" href="{% url 'login' %}"> Sign In</a>
+                </small>
+        
+            </div>
+    </form>
+   
+</div>
+</div>
+</div>
+{% endblock %}
