@@ -5,40 +5,33 @@
 
 
 
-<img class="home img-fluid" src="{% static 'jobs/images/pic1.jpg' %}" alt="background image">
+<img class="home container-fluid" src="{% static 'jobs/images/pic1.jpg' %}" alt="background image">
 <div class="text">
-        <h1> Welcome to pata job site</h1>
+        <h1 class="heading"> WELCOME TO PATA JOB SITE</h1>
         <br/>
-        <div class="home-search">
-            <div class="form">
-                    
-                
-                <form class="form-inline">
-                       
-                        <input class="form-control mr-sm-2" type="search" placeholder="Position" aria-label="Search">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Location" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
+        <div class="home-search container">
+            <div class="row " >
+                <div class="col-md-5 home-row">
+                    <h3> Easiest way to find your dream Job</h3><br />
+                    <p>Take the least of you time to peruse the jobs in out database and post your CV for our employees to find you</p> <br />
+                    <a href="{% url 'findjob' %}" class="button button-search"> FIND A JOB</a>
+
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-5 home-row">
+                    <h3> Find most competent employee</h3><br />
+                    <p>Post your job here to find the most suitable employee. You will find the best of them in our site</p> <br />
+                    <a href="{% url 'postjob' %}" class="button button-find"> POST A JOB</a>
+
+                </div>
+
         </div>
     </div>
 </div>
 
-    <div class="information row">
-       
-            <div class="col-md-4">
-                Angular
-
-            </div>
-            <div class="col-md-4">
-                Android
-
-            </div>
-            <div class="col-md-4">
-                Django
-
-            </div>
     
-    </div>
+
 
 
 

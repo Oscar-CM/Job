@@ -1,29 +1,62 @@
 .navbar{
-  background-color:burlywood;
+  background-color:#363f4d;
   text-align: center;
   position: relative;
   margin-top: 7px;
   color: white;
 }
 body{
-  background-color: bisque;
+  background-color: white;
 }
 .home{
   position:absolute;
 
- 
 }
 .text{
   position: relative;
-  margin-top: 200px;
-  scroll-margin-left: 100px;
+
   text-align: center;
   color: white;
 }
-form{
-  margin-top: 15px;
-  margin-left: 200px;
-}
+
 .information{
   position: absolute;
 }
+.heading {
+    margin-top: 130px;
+    color: #3688bf;
+    font-size: 70px;
+    font-family: "Times New Roman", Times, serif;
+}
+.home-search{
+    text-align: left;
+    margin-top: 55px;
+}
+.home-row{
+    background: rgba(76, 175, 80, 0.3);
+    color: white;
+    line-height: 20px;
+    font-family: "Times New Roman", Times, serif;
+    }
+.button-search{
+    font-size: 30px;
+    color: #0725ad;
+    background-color: #00f721;
+    opacity: 0.5;
+}
+.button-find {
+    font-size: 30px;
+    color: #09e326;
+    background-color: #0a238a;
+    opacity: 0.5:
+}
+.logo{
+    width: 200px;
+    height: 70px;
+}
+.footer{
+  background-color:#363f4d;
+  text-align: center;
+  position: relative;
+  margin-top: 7px;
+  color: white;

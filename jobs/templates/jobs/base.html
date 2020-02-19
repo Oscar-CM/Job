@@ -11,14 +11,15 @@
       <header class="site-header">
           <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
               <div class="container">
-                  <a class="navbar-brand mr-4" href="/">Pata Job</a>
+                  <img class=" logo" src="{% static 'jobs/images/Capture.PNG' %}" >
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
                       <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-                      <a class="nav-item nav-link" href="#}">About</a>
+                      <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+                        <a class="nav-item nav-link" href="{% url 'contact' %}">Contact Us</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
@@ -47,6 +48,23 @@
             {% endif %}
     {% block content %}
     {% endblock %}
+    <footer class="footer">
+          <nav>
+              <div class="container">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="navbar-nav mr-auto">
+                      <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+                      <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+                        <a class="nav-item nav-link" href="{% url 'contact' %}">Contact Us</a>
+                    </div>
+
+                  </div>
+                </div>
+              </nav>
+            </footer>
     
 	  
   </body>
