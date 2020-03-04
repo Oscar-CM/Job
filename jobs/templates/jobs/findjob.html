@@ -3,52 +3,24 @@
 
 <h1> FIND JOB</h1>
 <div class = "container">
-    <div class="row">
-        <div class="col-md-2">
-            <h2> COMPANY</h2>
 
+     {% for post in posts %}
+    <div class="card">
+        <div class="card-header">
+         {{ post.company }}
         </div>
-        <div class="col-md-3">
-             <h2> TITLE</h2>
-
-        </div>
-         <div class="col-md-5">
-             <h2> DESCRIPION</h2>
-
-        </div>
-
-         <div class="col-md-2">
-             <h2> APPLY</h2>
-
+        <div class="card-body">
+            <h5 class="card-title"> {{ post.title }}</h5>
+             <p class="card-text">{{ post.content }}</p>
+             <a href="{% url 'post-detail' post.id %}" class="btn btn-primary">VIEW JOB</a>
         </div>
     </div>
-     {% for job in jobs%}
-    <div class="row">
-        <div class="col-md-2">
-             {{ job.author}}
 
-        </div>
-        <div class="col-md-3">
-             {{ job.title}}
-
-        </div>
-        <div class="col-md-5">
-             {{ job.content}}
-
-        </div>
-        <div class="col-md-2">
-            <a href="{% url 'findjob' %}" class="button button-search"> APPLY</a>
-
-        </div>
-
-
-
-
-    </div>
     {% endfor %}
 
 
 </div>
+
 
 
 {% endblock %}
