@@ -1,0 +1,35 @@
+{% extends "jobs/base.html" %}
+{% block content%}
+
+<h1> FIND JOB</h1>
+<div class = "container">
+
+
+    <div class="card">
+        <div class="card-header">
+         {{ object.company }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"> {{ object.title }}</h5>
+             <p class="card-text">{{ object.content }}</p>
+
+            {% if object.author == user %}
+            <div>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}"> Update </a>
+             <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}"> Delete </a>
+            </div>
+            {% else %}
+            <div>
+                <a href="{% url 'application-home' %}" class="btn btn-primary">APPLY</a>
+            </div>
+                {% endif%}
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

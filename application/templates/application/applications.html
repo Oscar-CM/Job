@@ -1,0 +1,26 @@
+{% extends "jobs/base.html" %}
+{% block content%}
+
+<h1> FIND JOB</h1>
+<div class = "container">
+
+     {% for post in posts %}
+    <div class="card">
+        <div class="card-header">
+         {{ post.title }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"> {{ post.profile }}</h5>
+             <p class="card-text">{{ post.cv }}</p>
+             <a href="{% url 'post-detail' post.id %}" class="btn btn-primary">VIEW JOB</a>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+</div>
+
+
+
+{% endblock %}
